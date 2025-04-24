@@ -1,0 +1,19 @@
+[2024-10-16T02:13:25.023+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-16T02:13:25.045+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-10-16T02:13:21.283658+00:00 [queued]>
+[2024-10-16T02:13:25.050+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-10-16T02:13:21.283658+00:00 [queued]>
+[2024-10-16T02:13:25.050+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-16T02:13:25.061+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): reddit_extraction> on 2024-10-16 02:13:21.283658+00:00
+[2024-10-16T02:13:25.081+0000] {standard_task_runner.py:72} INFO - Started process 49 to run task
+[2024-10-16T02:13:25.133+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'etl_reddit_pipeline', 'reddit_extraction', 'manual__2024-10-16T02:13:21.283658+00:00', '--job-id', '37', '--raw', '--subdir', 'DAGS_FOLDER/reddit_dag.py', '--cfg-path', '/tmp/tmpxq3gcbao']
+[2024-10-16T02:13:25.136+0000] {standard_task_runner.py:105} INFO - Job 37: Subtask reddit_extraction
+[2024-10-16T02:13:25.310+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-10-16T02:13:21.283658+00:00 [running]> on host 5f3247c92ad8
+[2024-10-16T02:13:25.442+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Sushant' AIRFLOW_CTX_DAG_ID='etl_reddit_pipeline' AIRFLOW_CTX_TASK_ID='reddit_extraction' AIRFLOW_CTX_EXECUTION_DATE='2024-10-16T02:13:21.283658+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-16T02:13:21.283658+00:00'
+[2024-10-16T02:13:25.443+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-16T02:13:25.528+0000] {base.py:84} INFO - Retrieving connection 'reddit_api'
+[2024-10-16T02:13:25.672+0000] {logging_mixin.py:190} INFO - connected to reddit!
+[2024-10-16T02:13:27.322+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-10-16T02:13:27.339+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-16T02:13:27.340+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_reddit_pipeline, task_id=reddit_extraction, run_id=manual__2024-10-16T02:13:21.283658+00:00, execution_date=20241016T021321, start_date=20241016T021325, end_date=20241016T021327
+[2024-10-16T02:13:27.372+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-16T02:13:27.396+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-16T02:13:27.397+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

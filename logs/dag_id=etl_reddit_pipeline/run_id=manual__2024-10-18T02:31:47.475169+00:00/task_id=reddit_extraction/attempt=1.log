@@ -1,0 +1,19 @@
+[2024-10-18T02:31:49.267+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-18T02:31:49.279+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-10-18T02:31:47.475169+00:00 [queued]>
+[2024-10-18T02:31:49.285+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-10-18T02:31:47.475169+00:00 [queued]>
+[2024-10-18T02:31:49.285+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-18T02:31:49.292+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): reddit_extraction> on 2024-10-18 02:31:47.475169+00:00
+[2024-10-18T02:31:49.301+0000] {standard_task_runner.py:72} INFO - Started process 88 to run task
+[2024-10-18T02:31:49.310+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'etl_reddit_pipeline', 'reddit_extraction', 'manual__2024-10-18T02:31:47.475169+00:00', '--job-id', '58', '--raw', '--subdir', 'DAGS_FOLDER/reddit_dag.py', '--cfg-path', '/tmp/tmp8csc8yt5']
+[2024-10-18T02:31:49.316+0000] {standard_task_runner.py:105} INFO - Job 58: Subtask reddit_extraction
+[2024-10-18T02:31:49.360+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-10-18T02:31:47.475169+00:00 [running]> on host 7177c2697d25
+[2024-10-18T02:31:49.408+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Sushant' AIRFLOW_CTX_DAG_ID='etl_reddit_pipeline' AIRFLOW_CTX_TASK_ID='reddit_extraction' AIRFLOW_CTX_EXECUTION_DATE='2024-10-18T02:31:47.475169+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-18T02:31:47.475169+00:00'
+[2024-10-18T02:31:49.414+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-18T02:31:49.497+0000] {base.py:84} INFO - Retrieving connection 'reddit_api'
+[2024-10-18T02:31:49.511+0000] {logging_mixin.py:190} INFO - connected to reddit!
+[2024-10-18T02:31:50.532+0000] {python.py:240} INFO - Done. Returned value was: /opt/airflow/data/output/reddit_20241018.csv
+[2024-10-18T02:31:50.573+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-18T02:31:50.574+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_reddit_pipeline, task_id=reddit_extraction, run_id=manual__2024-10-18T02:31:47.475169+00:00, execution_date=20241018T023147, start_date=20241018T023149, end_date=20241018T023150
+[2024-10-18T02:31:50.610+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-18T02:31:50.639+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-18T02:31:50.639+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
