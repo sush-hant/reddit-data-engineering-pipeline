@@ -2,9 +2,6 @@
 
 An end-to-end Reddit data engineering project demonstrating how to extract data from the Reddit API, orchestrate jobs with Apache Airflow & Celery, store and transform data using Amazon S3, AWS Glue, Amazon Athena, and load into Amazon Redshift for analytics.
 
----
-
-## 🚀 Features
 
 - **Data Extraction**  
   - Uses [PRAW](https://praw.readthedocs.io/) (Python Reddit API Wrapper) to pull new posts & comments from a target subreddit.  
@@ -20,5 +17,4 @@ An end-to-end Reddit data engineering project demonstrating how to extract data 
 - **Infrastructure as Code**  
   - Docker Compose for local testing of Airflow + Postgres + Celery.  
 
----
 
